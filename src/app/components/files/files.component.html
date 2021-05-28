@@ -1,0 +1,11 @@
+<app-add-file
+    (onUploadFile) = "uploadFile($event)"
+>
+</app-add-file>
+<app-file-item
+    *ngFor="let file of files" 
+    [file] = "file" 
+    (onDeleteFile) = "deleteFile(file)" 
+    (onToggleFile) = "toggleFile(file)" 
+>
+</app-file-item>

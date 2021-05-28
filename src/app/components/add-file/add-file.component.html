@@ -1,0 +1,15 @@
+<form *ngIf="showUploadFile" class="add-form" (ngSubmit)= "onSubmit()">
+    <div class="form-control">
+        <label for="name">Name</label>
+        <input [(ngModel)]="name" disabled type="text" name="name" id="name" placeholder="File Name" value="{{name}}"/>
+    </div>
+    <div class="form-control">
+        <label for="day">Date</label>
+        <input [(ngModel)]="date" disabled type="text" name="date" id="date" placeholder="Date and Time" value="{{date}}"/>
+    </div>
+    <div class="form-control">
+        <label for="file">Select File</label>
+        <input  type="file" name="file" id="file"  (change) = "onFileChanged($event)"/>
+    </div>
+    <input type="submit" value="Save File" class="btn btn-block" />
+</form>

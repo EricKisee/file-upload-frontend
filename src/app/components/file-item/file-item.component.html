@@ -1,0 +1,13 @@
+<div class="file" (dblclick)="onToggle(file)">
+    <img [src]="retrievedImage" alt="image">
+    <h3>
+        {{file.name}} 
+    </h3>
+    <p>{{date(file.date)}}</p>
+    <fa-icon 
+        (click) = "onDelete(file)"
+        [ngStyle]="{ color : 'red'}" 
+        [icon] = "faTrash"
+    >
+    </fa-icon>
+</div>
