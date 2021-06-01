@@ -30,7 +30,7 @@ export class FilesComponent implements OnInit {
 
   uploadFile (file: MyFile){
     this.fileService.uploadFile(file).subscribe((file)=>(
-      this.files.push(file)
+      this.fileService.getFiles().subscribe((files)=>(this.files=files))
     ));
   }
 }
